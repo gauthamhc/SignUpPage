@@ -9,10 +9,19 @@ const SignUpPageWrapper = styled.div`
   width: 600px;
   margin: 0 auto;
   border-radius: 14px;
+  position: relative;
 `;
 
 const FontClose = styled.div`
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  padding: 0.2rem 1.2rem;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
   color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
 `;
 
 const SignUpHeader = styled.h3`
@@ -53,7 +62,8 @@ export const SignUpPage = () => {
   return (
     <SignUpPageWrapper>
       <FontClose>
-        <FontAwesomeIcon icon="fa-solid fa-square-xmark" />
+        <FontAwesomeIcon icon="check-square" />
+        Close
       </FontClose>
       <SignUpHeader>Please complete the details to Sign Up</SignUpHeader>
       <SignUpForm>
