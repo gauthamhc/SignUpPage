@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { HeaderComp } from './Components/Header/Header';
+import { HeaderComp } from './Components/Header/HeaderComp';
 import { HomeComp } from './Components/Home';
 import { SignUpPage } from './Components/Registration';
 import { SignInPage } from './Components/Registration';
