@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const HeaderWrapper = styled.section`
-  background-color: #ccc;
+  background-color: #0d1137;
   height: 10vh;
   max-width: 1400px;
 `;
@@ -12,7 +13,9 @@ const Header = styled.div`
   align-items: center;
   padding: 0.8rem 5rem;
 `;
-const Logo = styled.h2``;
+const Logo = styled.h2`
+  color: #e52165;
+`;
 const Lists = styled.div`
   display: flex;
   justify-content: space-between;
@@ -30,10 +33,17 @@ export const HeaderComp = () => {
   return (
     <HeaderWrapper>
       <Header>
-        <Logo>Logo</Logo>
+        <Link to="/">
+          <Logo>Logo</Logo>
+        </Link>
         <Lists>
-          <Signed>Sign Up</Signed>
-          <Signed>Sign In</Signed>
+          <Link to="/sign-up">
+            <Signed>Sign Up</Signed>
+          </Link>
+
+          <Link to="/sign-in">
+            <Signed>Sign In</Signed>
+          </Link>
         </Lists>
       </Header>
     </HeaderWrapper>

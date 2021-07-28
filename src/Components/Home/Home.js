@@ -10,6 +10,7 @@ const HomeWrapper = styled.section`
   font-size: 05rem;
   font-weight: 300;
   letter-spacing: 5px;
+  color: #e52165;
 `;
 
 export const HomeComp = () => {
