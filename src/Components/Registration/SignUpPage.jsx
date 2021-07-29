@@ -61,24 +61,15 @@ const SignUpButton = styled.button`
   color: #f6f6f6;
 `;
 
-export const SignUpPage = ({ OffSignUp }) => {
-  const takeAction = () => {
-    OffSignUp();
-  };
-  return (
-    <SignUpPageWrapper>
-      {/* <FontClose onClick={takeAction}>
-        <FontAwesomeIcon icon="check-square" />
-        Close
-      </FontClose> */}
-      <SignUpHeader>Sign up to Logo</SignUpHeader>
-      <SignUpForm>
-        <Input type="text" placeholder="Enter your Name" />
-        <Input type="text" placeholder="Enter your Email Address" />
-        <Input type="password" placeholder="Enter your password" />
-        <Input type="password" placeholder="Re-enter your password" />
-        <SignUpButton>Register</SignUpButton>
-      </SignUpForm>
-    </SignUpPageWrapper>
-  );
-};
+export const SignUpPage = () => (
+  <SignUpPageWrapper>
+    <SignUpHeader>Sign up to Logo</SignUpHeader>
+    <SignUpForm>
+      <Input type="text" placeholder="Enter your Name" />
+      <Input type="text" placeholder="Enter your Email Address" />
+      <Input type="password" placeholder="Enter your password" />
+      <Input type="password" placeholder="Re-enter your password" />
+      <SignUpButton>Register</SignUpButton>
+    </SignUpForm>
+  </SignUpPageWrapper>
+);

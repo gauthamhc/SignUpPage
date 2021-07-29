@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { HeaderComp } from './Components/Header/HeaderComp';
 import { HomeComp } from './Components/Home';
-import { SignUpPage } from './Components/Registration';
-import { SignInPage } from './Components/Registration';
+import { SignUpPage, SignInPage } from './Components/Registration';
 
 function App() {
-  const [signUpAction, setSignUpAction] = useState(false);
-
-  // const openSignUp = () => {
-  //   setSignUpAction(true);
-  // };
-  // const closeSignUp = () => {
-  //   setSignUpAction(false);
-  // };
   return (
     <Router>
-      <Switch>
-        <main className="App">
-          <HeaderComp />
+      <div className="App">
+        <HeaderComp />
+        <Switch>
           <Route exact path="/">
             <HomeComp />
           </Route>
@@ -28,8 +19,8 @@ function App() {
           <Route path="/sign-in">
             <SignInPage />
           </Route>
-        </main>
-      </Switch>
+        </Switch>
+      </div>
     </Router>
   );
 }

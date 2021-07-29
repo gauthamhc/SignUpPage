@@ -19,7 +19,7 @@ const SignInForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 `;
 const Input = styled.input`
   margin: 0.5rem auto;
@@ -33,7 +33,14 @@ const Input = styled.input`
   }
 `;
 
-const SignUpButton = styled.button`
+const ForgotPassword = styled.p`
+  color: #1e3d59;
+  margin: 0.8rem 0;
+  margin-right: 3rem;
+  cursor: pointer;
+`;
+
+const SignInButton = styled.button`
   display: inline-block;
   margin: 0.8rem auto 0;
   padding: 0.8em 1.8em;
@@ -48,15 +55,14 @@ const SignUpButton = styled.button`
   color: #f6f6f6;
 `;
 
-export const SignInPage = () => {
-  return (
-    <SignInPageWrapper>
-      <SignInHeader>Sign in to Logo</SignInHeader>
-      <SignInForm>
-        <Input type="text" placeholder="Enter your email-address" />
-        <Input type="text" placeholder="Enter your password" />
-        <SignUpButton>Submit</SignUpButton>
-      </SignInForm>
-    </SignInPageWrapper>
-  );
-};
+export const SignInPage = () => (
+  <SignInPageWrapper>
+    <SignInHeader>Sign in to Logo</SignInHeader>
+    <SignInForm>
+      <Input type="text" placeholder="Enter your email-address" />
+      <Input type="text" placeholder="Enter your password" />
+      <ForgotPassword>ForgotPassword ?</ForgotPassword>
+      <SignInButton>Submit</SignInButton>
+    </SignInForm>
+  </SignInPageWrapper>
+);

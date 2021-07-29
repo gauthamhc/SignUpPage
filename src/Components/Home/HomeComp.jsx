@@ -13,6 +13,4 @@ const HomeWrapper = styled.section`
   color: #e52165;
 `;
 
-export const HomeComp = () => {
-  return <HomeWrapper>Welcome</HomeWrapper>;
-};
+export const HomeComp = () => <HomeWrapper>Welcome</HomeWrapper>;

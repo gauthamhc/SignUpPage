@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const HeaderWrapper = styled.section`
+export const HeaderWrapper = styled.section`
   background-color: #0d1137;
   height: 10vh;
   max-width: 1400px;
@@ -29,23 +29,21 @@ const Signed = styled.button`
   letter-spacing: 2px;
 `;
 
-export const HeaderComp = () => {
-  return (
-    <HeaderWrapper>
-      <Header>
-        <Link to="/">
-          <Logo>Logo</Logo>
+export const HeaderComp = () => (
+  <HeaderWrapper>
+    <Header>
+      <Link to="/">
+        <Logo>Logo</Logo>
+      </Link>
+      <Lists>
+        <Link to="/sign-up">
+          <Signed>Sign Up</Signed>
         </Link>
-        <Lists>
-          <Link to="/sign-up">
-            <Signed>Sign Up</Signed>
-          </Link>
 
-          <Link to="/sign-in">
-            <Signed>Sign In</Signed>
-          </Link>
-        </Lists>
-      </Header>
-    </HeaderWrapper>
-  );
-};
+        <Link to="/sign-in">
+          <Signed>Sign In</Signed>
+        </Link>
+      </Lists>
+    </Header>
+  </HeaderWrapper>
+);

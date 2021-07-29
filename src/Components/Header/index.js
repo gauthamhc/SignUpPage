@@ -1,1 +1,1 @@
-export { HeaderComp } from './HeaderComp.jsx';
+// export { HeaderComp } from './HeaderComp';

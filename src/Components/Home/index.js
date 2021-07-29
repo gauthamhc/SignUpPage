@@ -1,1 +1,1 @@
-export { HomeComp } from './HomeComp.jsx';
+export { HomeComp } from './HomeComp';
